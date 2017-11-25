@@ -1,45 +1,73 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Crystal Collector</title>
-    <link rel="stylesheet" type="text/css" href="/assets/css/reset.css">
-    <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+	<title>Crystal Collector</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script type="text/javascript" src="assets/javascript/game.js"></script>
 </head>
 <body>
+
 <div class="container">
-    <div class="header">
-        <h1>Crystal Collector</h1>
-    </div>
-    <div class="instructions">
-        <h2>Instructions</h2>
-        <p>You will be given a random number at the start of the game.</p>
-        <p> There are four crystals below. By clicking on a crystal, you will add a specific amount of points to your total score.</p>
-        <p>You win the game by matching your total score to the random number. You lose the game if your total score goes above the random number.
-        <p>The value of each crystal is hidden from you until you click on it.</p>
-        <p>Each time when the game starts, the game will change the values of each crystal. </p>
-    </div> 
-            <div class="picture">
-                <img src="/assets/images/blue.png" class=crystal id="blue">
-                <img src="/assets/img/yellow.png" class=crystal id="yellow">
-                <img src="/assets/img/pink.png" class=crystal id="pink">
-                <img src="/assets/img/purple.png" class=crystal id="purple">
-            </div>
-            <div class="panel-body">
-                <h4 id="firstbox">Number to match: <span id= "number"></span></h4>
-                <h4 id="secondbox">Your number: <span id="Combined"></span></h4>
-            </div>
-            <div class="panel-body">
-                <h4> Wins: <span id= "numberWins"></span>  </h4>
-                <h4>Losses: <span id= "numberLosses"></span>  </h4>
-            </div>
+
+			<div class= "jumbotron">
+				<h1>Crystal Collector</h1>
+			</div>
+
+			<div class="panel panel-default">
+
+				<div class= "panel-heading">
+					<div class="panel-title">Instructions</div>
+				</div>
+
+				<div class= "panel-body">
+					You will be given a random number at the start of the game.
+					<br><br>
+					There are four crystals below. By clicking on a crystal, you will add a specific amount of points to your total score.
+					<br><br>
+					You win the game by matching your total score to the random number. You lose the game if your total score goes above the random number.
+					<br><br>
+					The value of each crystal is hidden from you until you click on it.
+					<br><br>
+					Each time when the game starts, the game will change the values of each crystal.
+					<br><br>
+				</div>
+
+			</div>
+
+
+		<div class="col-sm-6">
+			<div class="panel panel-default text-center" id= "panelStyle">
+				<div class= "panel-body">
+					<img src="assets/images/blue.png" class=JewelStyle id="blue">
+					<img src="assets/images/yellow.png" class=JewelStyle id="yellow">
+					<img src="assets/images/pink.png" class=JewelStyle id="pink">
+					<img src="assets/images/purple.png" class=JewelStyle id="purple">
+				</div>
+			</div>
+		</div>
+
+		<div class="col-sm-3">
+			<div class="panel panel-default" id= "panelStyle">
+				<div class= "panel-body">
+					<h4 id = "firstbox">Number to match: <span id= "number"></span></h4>
+					<h4 id = "firstbox">Your number: <span id="combined"></span></h4>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-sm-3">
+			<div class="panel panel-default" id= "panelStyle">
+				<div class= "panel-body">
+					<h4 id="secondbox">Wins: <span id= "numberWins"></span></h4>
+					<h4 id="secondbox">Losses: <span id= "numberLosses"></span>
+					</h4>
+				</div>
+			</div>
+		</div>
+
 </div>
 
-<div id="outcome" class="modal">
-  <div class="modal-content">
-    <span class="close">&times;</span>
-
-    <p></p>
-  </div>
-</div>
 </body>
 </html>
